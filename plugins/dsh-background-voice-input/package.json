@@ -1,0 +1,36 @@
+{
+  "name": "@kajyuuen/dsh-background-voice-input",
+  "version": "0.1.0",
+  "description": "Continue DSH microphone recording while another app is focused",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-experimental-client-ui-voice-input"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kajyuuen/dsh-skills-plugins.git",
+    "directory": "plugins/dsh-background-voice-input"
+  }
+}

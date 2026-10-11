@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "components": [
+    {
+      "id": "dsh-background-voice-input",
+      "type": "plugin",
+      "path": "plugins/dsh-background-voice-input",
+      "package": "@kajyuuen/dsh-background-voice-input",
+      "version": "0.1.0",
+      "description": "Continue DSH microphone recording while another app is focused",
+      "distribution": "Repository checkout; not published to npm"
+    },
+    {
+      "id": "dsh-handy-voice-input",
+      "type": "plugin",
+      "path": "plugins/dsh-handy-voice-input",
+      "package": "dsh-handy-voice-input",
+      "version": "0.1.0",
+      "description": "Use Handy's local speech-recognition models with DeepSeek Harness Voice input",
+      "distribution": "Repository checkout; not published to npm"
+    },
+    {
+      "id": "dsh-question-voice-input",
+      "type": "plugin",
+      "path": "plugins/dsh-question-voice-input",
+      "package": "@kajyuuen/dsh-question-voice-input",
+      "version": "0.3.0",
+      "description": "Adds voice dictation to free-text fields in question cards",
+      "distribution": "Repository checkout; not published to npm"
+    }
+  ]
+}

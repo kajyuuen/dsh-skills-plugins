@@ -1,0 +1,77 @@
+{
+  "name": "dsh-handy-voice-input",
+  "version": "0.1.0",
+  "description": "Use Handy's local speech-recognition models with DeepSeek Harness Voice input",
+  "license": "MIT",
+  "author": "kajyuuen",
+  "homepage": "https://github.com/kajyuuen/dsh-skills-plugins/tree/main/plugins/dsh-handy-voice-input#readme",
+  "bugs": {
+    "url": "https://github.com/kajyuuen/dsh-skills-plugins/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kajyuuen/dsh-skills-plugins.git",
+    "directory": "plugins/dsh-handy-voice-input"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "handy",
+    "voice-input",
+    "speech-to-text",
+    "local-first"
+  ],
+  "type": "module",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib",
+    "assets/icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node tests/smoke.mjs",
+    "check": "pnpm run typecheck && pnpm run build && pnpm run test",
+    "prepack": "pnpm run check"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0 <5",
+    "@deepseek-ai/schemastery": ">=3.18.0 <4",
+    "@deepseek-ai/dsh-experimental-speech-to-text": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-subprocess": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.4",
+    "@deepseek-ai/schemastery": "3.18.4",
+    "@deepseek-ai/dsh-experimental-speech-to-text": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-subprocess": "0.2.0-rc.2",
+    "@types/node": "^24.10.0",
+    "tsdown": "^0.22.2",
+    "typescript": "7.0.2"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

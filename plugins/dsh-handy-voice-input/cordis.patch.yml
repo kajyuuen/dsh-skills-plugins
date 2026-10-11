@@ -1,0 +1,11 @@
+- id: speech-to-text
+  config:
+    defaultProvider: handy-local
+    language: auto
+- insert:
+    - id: speech-to-text-handy-local
+      name: dsh-handy-voice-input
+      config:
+        providerId: handy-local
+        providerName: Handy Local
+        dataRoot: !!js dshHomePath('speech-to-text', 'handy')

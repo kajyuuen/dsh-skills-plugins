@@ -1,0 +1,35 @@
+{
+  "name": "@kajyuuen/dsh-question-voice-input",
+  "version": "0.3.0",
+  "description": "Voice dictation button for free-text fields in DeepSeek Harness questions",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-experimental-client-ui-voice-input"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kajyuuen/dsh-skills-plugins.git",
+    "directory": "plugins/dsh-question-voice-input"
+  }
+}
