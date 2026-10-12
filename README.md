@@ -10,7 +10,7 @@ Each plugin has its own package, installation instructions, and license.
 
 <!-- public-plugins:start -->
 | Plugin | Version | What it does |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | [`dsh-background-voice-input`](plugins/dsh-background-voice-input/README.md) | `0.1.0` | Continue DSH microphone recording while another app is focused |
 | [`dsh-handy-voice-input`](plugins/dsh-handy-voice-input/README.md) | `0.1.0` | Use Handy's local speech-recognition models with DeepSeek Harness Voice input |
 | [`dsh-question-voice-input`](plugins/dsh-question-voice-input/README.md) | `0.3.0` | Adds voice dictation to free-text fields in question cards |
